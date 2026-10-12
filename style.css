@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fb;
+    color: #1e293b;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: 36px;
+}
+
+p {
+    margin-bottom: 28px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+button {
+    margin: 6px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus-visible {
+    outline: 3px solid #0f172a;
+    outline-offset: 3px;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(0, 1fr));
+    width: 100%;
+    max-width: 640px;
+    margin: 30px auto;
+    border-top: 1px solid #cbd5e1;
+    border-left: 1px solid #cbd5e1;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background-color: white;
+    border-right: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+}
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cell.start {
+    background-color: #16a34a;
+    color: white;
+}
+
+.cell.finish {
+    background-color: #dc2626;
+    color: white;
+}
+.cell {
+    cursor: pointer;
+}
+
+.cell.wall {
+    background-color: #1e293b;
+}
+.cell.visited {
+    background-color: #93c5fd;
+}
+.cell.path {
+    background-color: #facc15;
+}
+body.searching #grid {
+    pointer-events: none;
+}
+
+body.searching button {
+    pointer-events: none;
+    opacity: 0.6;
+}
+.cell.visited {
+    background-color: #93c5fd;
+}
+
+.cell.path {
+    background-color: #facc15;
+}
+.cell.weight {
+    background-color: #c4b5fd;
+    color: #1e293b;
+}
+
+.cell.visited {
+    background-color: #93c5fd;
+}
+
+.cell.path {
+    background-color: #facc15;
+}
+.instructions {
+    max-width: 640px;
+    margin: 14px auto;
+    font-size: 14px;
+    line-height: 1.6;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pathfinding Visualizer</h1>
+    <p>Explore how algorithms find a path through a grid.</p>
+
+    <button type="button" id="bfs-button">Run BFS</button>
+    <button type="button" id="dijkstra-button">Run Dijkstra</button>
+    <button type="button" id="clear-button">Clear Grid</button>
+    <p class="instructions">
+        Click a cell to add or remove a wall.
+        Shift + click to add or remove a weight (cost 5).
+        Normal cells cost 1 to enter.
+    </p>
+
+    <p class="instructions">
+        Green S = Start · Red F = Finish · Dark = Wall ·
+        Purple 5 = Weight · Blue = Explored · Yellow = Path
+    </p>
+    <p id="results" aria-live="polite">Run an algorithm to see its results.</p>
+    <div id="grid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
